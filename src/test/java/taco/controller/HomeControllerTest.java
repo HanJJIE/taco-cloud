@@ -19,7 +19,7 @@ public class HomeControllerTest {
 
     @Test
     public void testHomePage() throws Exception {
-
+//        获取根路径，期待返回 200 并包含 Welcome to...
         mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Welcome to...")));
