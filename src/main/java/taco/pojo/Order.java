@@ -3,8 +3,8 @@ package taco.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -17,5 +17,8 @@ public class Order {
     private String phone;
     @NotBlank(message = "address is required")
     private String address;
+
+    private Long id;
+    private Date createAt;
 
 }
